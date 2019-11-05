@@ -95,6 +95,7 @@ const show = (req, res) => {
 
 const update = async (req, res) => {
   const {
+    photo,
     name,
     email,
     password,
@@ -114,6 +115,7 @@ const update = async (req, res) => {
   {
     name,
     password: newPass,
+    photo,
   },
   {
     new: true,

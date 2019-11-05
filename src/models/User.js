@@ -5,6 +5,7 @@ const { Schema } = mongoose;
 mongoose.Promise = global.Promise;
 
 const userSchema = new Schema({
+  photo: String,
   name: {
     type: String,
     trim: true,
