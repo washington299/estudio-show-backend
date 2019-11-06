@@ -64,7 +64,12 @@ const login = async (req, res) => {
     return;
   }
 
-  const { id, name } = user;
+  const {
+    id,
+    name,
+    photo,
+    photo_url,
+  } = user;
 
   const tokenData = {
     iss: JWT_ISS,
@@ -72,6 +77,8 @@ const login = async (req, res) => {
     sub: id,
     name,
     email,
+    photo,
+    photo_url,
   };
 
   const Token = await jwt.generateJWT(tokenData);
